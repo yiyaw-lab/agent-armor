@@ -9,6 +9,8 @@ I'm [yiya](https://yiya.dev) — non-traditional engineer building in public on 
 | Skill | What it does |
 |-------|--------------|
 | [archive-session](archive-session/) | Archives a Claude Code session into the project's `private/` folder: full transcript, durable findings + decisions docs, and a graded session summary — scoring both my prompting and the agent's performance. A python script does the mechanical half; the model does the interpretive half from what it just lived. |
+| [grade-session](grade-session/) | The report card, standalone: two candid graded tables — your prompting and the agent's performance — plus a coach note for each side. No dependencies; prints in chat. |
+| [snip](snip/) | Turns any file or snippet into a build-in-public bundle: disclosure-boundary + secrets check first, then a freeze-rendered PNG in my house style, a draft post caption, and a posted/not-posted index. |
 
 ## Install
 
