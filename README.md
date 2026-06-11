@@ -13,6 +13,7 @@ I'm [yiya](https://yiya.dev) — non-traditional engineer building in public on 
 | [snip](snip/) | Turns any file or snippet into a build-in-public bundle: disclosure-boundary + secrets check first, then a freeze-rendered PNG in my house style, a draft post caption, and a posted/not-posted index. |
 | [until](until/) | Goal-pursuit engine: pin a verifiable objective, then attempt → verify → adjust until it's done. Negative-control checks, a hypothesis ledger that forbids re-testing refuted ideas, git checkpoints, and a forced escalation ladder ending in fresh-context subagents. Survives session death via a state file. |
 | [card](card/) | Stages one insight as a designed, share-ready PNG — modern product aesthetic (gradient accents, glassy pills, ambient glow), rendered from HTML/CSS via headless Chrome. /snip shows source; /card stages an idea. |
+| [prompt](prompt/) | Prompt library + compiler: save frequent prompts as parameterized templates, invoke them by name (type 3 words, run the 80-word version), or refine a draft for effect-per-token — front-loading your acceptance criteria so the bar doesn't arrive as round-2 corrections. Ships with starter templates. |
 
 ## Install
 

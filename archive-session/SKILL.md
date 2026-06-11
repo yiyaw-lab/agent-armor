@@ -29,7 +29,12 @@ It writes the transcript body and prints a JSON report. **Verify `jsonl_used` / 
 - **Decisions** (high-signal only): for each architectural choice/pivot/commitment, write `decisions/Decision_<NNN>_PascalCaseTitle.md` starting at `next_decision` (`## What Changed` / `## Why` / `## Tradeoffs Accepted`).
 - **Session summary** (always): write `summary_path`. Match the latest existing summary: a `# Session Evaluation` block with two graded tables (**User Communication**: Prompt Clarity, Context Provided, Specificity of Intent, Feedback Quality; **Agent Performance**: Output Quality, Alignment to Intent, Depth, Efficiency, Avoided Mistakes), each row Grade + honest Notes; then a **Coach Note (for user)** and **Agent Note**; then `---`; then `# <Project> Session <NN> Summary` with Date, Session (transcript filename), `## What Happened` (bullets, linking Finding_/Decision_ ids), `## Key Output`. Grade candidly — including the agent's own mistakes.
 
-## Step 5 — Index + report
+## Step 5 — Public build log (if the project keeps one)
+- If the repo has `docs/build-log/`, check whether today's entry exists (`docs/build-log/<YYYY-MM-DD>.md`). If it's missing and real build work happened (check `git log` for the date — scheduler-bot/run-state commits alone don't count), **draft it** in the established voice of the latest entries (theme header, TL;DR, numbered workstreams, honest meta-lessons), covering the day **across all sessions** (yours + what peers' commits/archives show), and add it to the log's README index (newest first).
+- The build log is a TRACKED, often public file: no private finding/decision ids, no personal details, nothing from gitignored strategy docs beyond an oblique mention.
+- Also glance for **gap days** since the last entry; backfill only days with real work. Commit per the project's git rules (only with standing or explicit authorization; on a branch if the default branch is checked out).
+
+## Step 6 — Index + report
 - If `private/README.md` has a Sessions list, add this session's line. If no README exists and the project wants one, create a brief index.
 - Update any relevant memory files so the next session loads the FINAL state, not retracted intermediate claims.
 - Print a concise report of every file created/updated (paths), and the session number.
