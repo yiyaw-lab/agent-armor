@@ -14,8 +14,8 @@ The common thread: **agents are cheap, verification is the product.** Most of th
 | [until](until/) | Goal-pursuit engine: pin a verifiable objective, then attempt, verify, adjust until it is done. Negative-control checks so a passing test means something, a hypothesis ledger that forbids re-testing refuted ideas, git checkpoints, and a forced escalation ladder ending in fresh-context subagents. Survives session death via a state file. |
 | [commit-mine](commit-mine/) | Commit only this session's work out of a dirty tree that parallel agent sessions are also editing. Positive hunk selection (you can't subtract a peer you haven't seen), a staged-snapshot test that runs the suite against the index rather than the working tree, and a foreign-symbol check before every commit. Ships the checker script. |
 | [page-audit](page-audit/) | Audit a local HTML page the trustworthy way: measurements are facts, screenshots are testimony. An instrumented iframe harness reports overflow and element widths per viewport before any screenshot is taken, then modern headless Chrome captures with animations neutralized. Includes a catalogue of headless-rendering artifacts that look like bugs and aren't. |
-| [archive-session](archive-session/) | Archives a Claude Code session into the project's `private/` folder: full transcript, durable findings and decisions docs, and a graded session summary scoring both my prompting and the agent's performance. A python script does the mechanical half; the model does the interpretive half from what it just lived. |
-| [grade-session](grade-session/) | The report card, standalone: two candid graded tables (your prompting, the agent's performance) plus a coach note for each side. Straight A's count as failed grading. No dependencies; prints in chat. |
+| [harvest](harvest/) | Milk an ending session for everything durable, so the next run starts richer: full transcript, durable findings/decisions docs, a candid graded report card (both your prompting and the agent's), a build-log entry, and banked memory lessons — then it auto-stages a build-in-public `/card` or `/snip` from the session's most shareable, frontier-builder-relevant gold (disclosure-gated). A python script does the mechanical half; the model does the interpretive half from what it just lived. (Renamed from `archive-session`; folds in `grade-session`.) |
+| [grade-session](grade-session/) | The report card, standalone: two candid graded tables (your prompting, the agent's performance) plus a coach note for each side. Straight A's count as failed grading. No dependencies; prints in chat. (Also folded into `/harvest`'s close-out.) |
 | [prompt](prompt/) | Prompt library plus compiler: save frequent prompts as parameterized templates, invoke them by name (type 3 words, run the 80-word version), or refine a draft for effect per token by front-loading your acceptance criteria so the bar doesn't arrive as round-2 corrections. Ships with starter templates. |
 | [snip](snip/) | Turns any file or snippet into a build-in-public bundle: disclosure-boundary and secrets check first, then a freeze-rendered PNG in my house style, a draft post caption, and a posted/not-posted index. |
 | [card](card/) | Stages one insight as a designed, share-ready PNG in a modern product aesthetic (gradient accents, glassy pills, ambient glow), rendered from HTML/CSS via headless Chrome. `/snip` shows source; `/card` stages an idea. |
@@ -30,11 +30,11 @@ Each skill folder has a `SKILL.md` and sometimes a `scripts/` directory.
 
 ```sh
 # the skill (as a slash command)
-cp archive-session/SKILL.md ~/.claude/commands/archive-session.md
+cp harvest/SKILL.md ~/.claude/commands/harvest.md
 
 # its script, if it has one
 mkdir -p ~/.claude/scripts
-cp archive-session/scripts/session_to_markdown.py ~/.claude/scripts/
+cp harvest/scripts/session_to_markdown.py ~/.claude/scripts/
 ```
 
 Some skills reference my personal conventions: a `private/` folder taxonomy, memory files, a TASTE.md rubric. Those references are the load-bearing part. Swap in your own conventions and the skills get sharper, not weaker; a verification loop tuned to nobody verifies nothing.
