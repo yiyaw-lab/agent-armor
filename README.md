@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://github.com/yiyaw-lab/agent-armor/actions/workflows/validate-skills.yml"><img src="https://github.com/yiyaw-lab/agent-armor/actions/workflows/validate-skills.yml/badge.svg" alt="validate-skills CI"></a>
   <a href="https://github.com/yiyaw-lab/agent-armor/blob/main/LICENSE"><img src="https://img.shields.io/github/license/yiyaw-lab/agent-armor?style=flat-square&color=0a0a0f&labelColor=0a0a0f&logoColor=white" alt="License: MIT"></a>
-  <img src="https://img.shields.io/badge/skills-17-fab387?style=flat-square&labelColor=0a0a0f" alt="17 skills">
+  <img src="https://img.shields.io/badge/skills-18-fab387?style=flat-square&labelColor=0a0a0f" alt="18 skills">
   <a href="https://github.com/yiyaw-lab/agent-armor/commits/main"><img src="https://img.shields.io/github/last-commit/yiyaw-lab/agent-armor?style=flat-square&color=fab387&labelColor=0a0a0f" alt="Last commit"></a>
   <a href="https://docs.claude.com/en/docs/claude-code"><img src="https://img.shields.io/badge/Claude_Code-skills-0a0a0f?style=flat-square&logo=anthropic&logoColor=fab387&labelColor=0a0a0f" alt="Claude Code"></a>
   <a href="https://x.com/yiyadev"><img src="https://img.shields.io/badge/follow-%40yiyadev-0a0a0f?style=flat-square&logo=x&logoColor=white&labelColor=0a0a0f" alt="Follow @yiyadev"></a>
@@ -15,7 +15,7 @@
 
 **Agents are cheap. Verification is the product.**
 
-An agent will generate anything you ask — that is the free part. *Armor* is what makes it safe to wield: the verification that forces it to **prove** its work instead of describe it, the economics that price every token, the flywheel that compounds what it learns across sessions, and the guardrails that make a dangerous move structurally impossible instead of merely discouraged. This repo is that armor — seventeen working Claude Code skills, and a playbook for harnessing a coding agent without getting cut by it.
+An agent will generate anything you ask — that is the free part. *Armor* is what makes it safe to wield: the verification that forces it to **prove** its work instead of describe it, the economics that price every token, the flywheel that compounds what it learns across sessions, and the guardrails that make a dangerous move structurally impossible instead of merely discouraged. This repo is that armor — eighteen working Claude Code skills, and a playbook for harnessing a coding agent without getting cut by it.
 
 The proof, not the pitch: the first overnight `/nightshift` run shipped 6 of 6 tasks at **$11.52 per shipped task** — and the one defect that night was caught by exactly this discipline. An agent gamed its own done-check; the adversarial reviewer refused it. That refusal is the whole thesis in one event.
 
@@ -92,6 +92,7 @@ The work is more credible when it is visible. These turn a finding, a clean snip
 |-------|--------------|
 | [card](card/) | Stages one insight as a designed, share-ready PNG in a modern product aesthetic (gradient accents, glassy pills, ambient glow), rendered from HTML/CSS via headless Chrome. Reads the house visual system from `DESIGN_SYSTEM.md`. `/snip` shows source; `/card` stages an idea. |
 | [snip](snip/) | Turns any file or snippet into a build-in-public bundle: disclosure-boundary and secrets check first, then a freeze-rendered PNG in a house style, a draft post caption, and a posted/not-posted index. |
+| [publish](publish/) | The closed-loop publisher: take a durable artifact harvest extracted (a finding, a decision, a shipped repo, a scored prediction), run a disclosure+secrets scan and the four-part gate (Reusable · Non-trivial · Specific · Verified), render it against the REAL `yiyaw-lab/yiyadev` content schemas (guides / code / tools / notes / track-record), and open a PR — never merge. The human plus the Cloudflare/Lovable preview are the verification step: the thesis applied to publishing. The public-facing sibling of the flywheel. Modes: `<artifact>` / sweep / draft. |
 | [prompt](prompt/) | Prompt library plus compiler: save frequent prompts as parameterized templates, invoke them by name (type 3 words, run the 80-word version), or refine a draft for effect per token by front-loading your acceptance criteria. Ships with starter templates. |
 
 ## Start here
