@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://github.com/yiyaw-lab/agent-armor/actions/workflows/validate-skills.yml"><img src="https://github.com/yiyaw-lab/agent-armor/actions/workflows/validate-skills.yml/badge.svg" alt="validate-skills CI"></a>
   <a href="https://github.com/yiyaw-lab/agent-armor/blob/main/LICENSE"><img src="https://img.shields.io/github/license/yiyaw-lab/agent-armor?style=flat-square&color=0a0a0f&labelColor=0a0a0f&logoColor=white" alt="License: MIT"></a>
-  <img src="https://img.shields.io/badge/skills-18-fab387?style=flat-square&labelColor=0a0a0f" alt="18 skills">
+  <img src="https://img.shields.io/badge/skills-19-fab387?style=flat-square&labelColor=0a0a0f" alt="19 skills">
   <a href="https://github.com/yiyaw-lab/agent-armor/commits/main"><img src="https://img.shields.io/github/last-commit/yiyaw-lab/agent-armor?style=flat-square&color=fab387&labelColor=0a0a0f" alt="Last commit"></a>
   <a href="https://docs.claude.com/en/docs/claude-code"><img src="https://img.shields.io/badge/Claude_Code-skills-0a0a0f?style=flat-square&logo=anthropic&logoColor=fab387&labelColor=0a0a0f" alt="Claude Code"></a>
   <a href="https://x.com/yiyadev"><img src="https://img.shields.io/badge/follow-%40yiyadev-0a0a0f?style=flat-square&logo=x&logoColor=white&labelColor=0a0a0f" alt="Follow @yiyadev"></a>
@@ -15,7 +15,7 @@
 
 **Agents are cheap. Verification is the product.**
 
-An agent will generate anything you ask — that is the free part. *Armor* is what makes it safe to wield: the verification that forces it to **prove** its work instead of describe it, the economics that price every token, the flywheel that compounds what it learns across sessions, and the guardrails that make a dangerous move structurally impossible instead of merely discouraged. This repo is that armor — eighteen working Claude Code skills, and a playbook for harnessing a coding agent without getting cut by it.
+An agent will generate anything you ask — that is the free part. *Armor* is what makes it safe to wield: the verification that forces it to **prove** its work instead of describe it, the economics that price every token, the flywheel that compounds what it learns across sessions, and the guardrails that make a dangerous move structurally impossible instead of merely discouraged. This repo is that armor — nineteen working Claude Code skills, and a playbook for harnessing a coding agent without getting cut by it.
 
 The proof, not the pitch: the first overnight `/nightshift` run shipped 6 of 6 tasks at **$11.52 per shipped task** — and the one defect that night was caught by exactly this discipline. An agent gamed its own done-check; the adversarial reviewer refused it. That refusal is the whole thesis in one event.
 
@@ -31,7 +31,7 @@ Five principles for getting trustworthy, compounding work out of a coding agent 
   agent-armor · the playbook
   ───────────────────────────────────────────────────────────────────
   1 · MAKE IT PROVE, DON'T DESCRIBE   verification you can't fake
-       until · nightshift · relay · commit-mine · page-audit
+       until · nightshift · relay · commit-mine · tidy · page-audit
   ───────────────────────────────────────────────────────────────────
   2 · COMPOUND EVERY SESSION          capital in and out of each run
        harvest → capitalize → milk · stash · burn
@@ -56,6 +56,7 @@ The agent's word that something works is worth nothing. These make it produce ev
 | [nightshift](nightshift/) | The night shift. Call it at bedtime: it builds its own worklist across your active repos, executes under an absolute safety contract (branches only, nothing irreversible, nothing outward-facing), double-verifies every task with a pinned binary done-check plus a fresh-context reviewer told to refute it, and leaves a 2-minute morning brief with measured dollars-per-shipped-task economics. |
 | [relay](relay/) | Credit-aware long-run carrier: take a multi-step autonomous chain across a credit/rate-limit window or planned pause WITHOUT losing work. Checkpoints durable state (commit+push branches with verified pushes, persist the todo list + worktree paths + a resume brief), schedules a session-death-surviving wake (durable one-shot cron at the absolute resume time), auto-resumes single-flight (so a double-fire can't double-run the checklist), and finishes with no loose ends. Honest by construction — never fakes a credit meter it cannot read; triggers on a timer, a manual call, or a transcript-measured token budget. Modes: checkpoint / pause / resume / watch. |
 | [commit-mine](commit-mine/) | Commit only this session's work out of a dirty tree that parallel agent sessions are also editing. Positive hunk selection, a staged-snapshot test that runs the suite against the index rather than the working tree, and a foreign-symbol check before every commit. Ships the checker script. |
+| [tidy](tidy/) | The judgment layer for workspace hygiene: take the loose ends an always-on reconcile hook surfaces and resolve them with the reasoning a bash script can't — branch-supersession triage (merged-equivalent-via-squash vs real-unmerged vs stale vs sibling-superseded, proven three ways before any delete), push/PR decisions, worktree-removal calls, PR-state awareness. Verify-before-delete, reversible-only, propose-on-approval; never deletes unmerged work or a peer's worktree. Pairs with a Stop/PostToolUse hygiene hook that auto-cleans the provably-safe and surfaces the rest. Modes: triage / audit / apply. |
 | [page-audit](page-audit/) | Audit a local HTML page the trustworthy way: measurements are facts, screenshots are testimony. An instrumented iframe harness reports overflow and element widths per viewport before any screenshot, then modern headless Chrome captures with animations neutralized. Includes a catalogue of headless-rendering artifacts that look like bugs and aren't. |
 
 ### 2 · Compound every session — never pay rent twice
